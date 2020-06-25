@@ -63,7 +63,7 @@ namespace Марафон
             int login = 0;
             string role = "";
             using (SqlConnection conn = new
-            SqlConnection(Марафон.Properties.Settings.Default.MaraphonConnectionString))
+            SqlConnection(Марафон.Properties.Settings.Default.MaraphonConnectionString1))
             {
                 conn.Open();
                 SqlCommand cmd = conn.CreateCommand();
@@ -120,6 +120,11 @@ namespace Марафон
         }
 
         private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
 
         }

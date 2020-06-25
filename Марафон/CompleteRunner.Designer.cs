@@ -44,11 +44,11 @@
             // 
             // button1
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F);
             this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Location = new System.Drawing.Point(21, 26);
+            this.button1.Location = new System.Drawing.Point(22, 11);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 29);
+            this.button1.Size = new System.Drawing.Size(118, 32);
             this.button1.TabIndex = 0;
             this.button1.Text = "Назад";
             this.button1.UseVisualStyleBackColor = true;
@@ -56,11 +56,11 @@
             // 
             // button2
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F);
             this.button2.ForeColor = System.Drawing.Color.Black;
-            this.button2.Location = new System.Drawing.Point(449, 26);
+            this.button2.Location = new System.Drawing.Point(573, 12);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 29);
+            this.button2.Size = new System.Drawing.Size(118, 32);
             this.button2.TabIndex = 1;
             this.button2.Text = "Logout";
             this.button2.UseVisualStyleBackColor = true;
@@ -68,9 +68,11 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(225, 301);
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F);
+            this.button3.ForeColor = System.Drawing.Color.Black;
+            this.button3.Location = new System.Drawing.Point(285, 256);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(103, 29);
+            this.button3.Size = new System.Drawing.Size(117, 30);
             this.button3.TabIndex = 2;
             this.button3.Text = "OK";
             this.button3.UseVisualStyleBackColor = true;
@@ -79,13 +81,13 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(191, 32);
+            this.label1.Location = new System.Drawing.Point(248, 16);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(163, 16);
+            this.label1.Size = new System.Drawing.Size(228, 20);
             this.label1.TabIndex = 3;
-            this.label1.Text = "MARATHON SKILLS 2020";
+            this.label1.Text = "MARATHON SKILLS 2021";
             // 
             // label2
             // 
@@ -93,11 +95,12 @@
             this.label2.BackColor = System.Drawing.Color.White;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(107, 135);
+            this.label2.Location = new System.Drawing.Point(126, 97);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(336, 16);
+            this.label2.Size = new System.Drawing.Size(470, 25);
             this.label2.TabIndex = 4;
             this.label2.Text = "Спасибо за Вашу регистрацию в качестве бегуна!";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
@@ -105,9 +108,9 @@
             this.label3.BackColor = System.Drawing.Color.White;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(38, 191);
+            this.label3.Location = new System.Drawing.Point(17, 152);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(472, 16);
+            this.label3.Size = new System.Drawing.Size(673, 25);
             this.label3.TabIndex = 5;
             this.label3.Text = "Спасибо за Вашу регистрацию в качестве бегуна в Marathon Skills 2020!";
             // 
@@ -117,9 +120,9 @@
             this.label4.BackColor = System.Drawing.Color.White;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(162, 240);
+            this.label4.Location = new System.Drawing.Point(187, 206);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(238, 16);
+            this.label4.Size = new System.Drawing.Size(346, 25);
             this.label4.TabIndex = 6;
             this.label4.Text = "С Вами свяжутся по поводу оплаты";
             this.label4.Click += new System.EventHandler(this.label4_Click);
@@ -129,9 +132,9 @@
             this.time.AutoSize = true;
             this.time.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.time.ForeColor = System.Drawing.Color.Black;
-            this.time.Location = new System.Drawing.Point(130, 392);
+            this.time.Location = new System.Drawing.Point(147, 390);
             this.time.Name = "time";
-            this.time.Size = new System.Drawing.Size(287, 16);
+            this.time.Size = new System.Drawing.Size(439, 23);
             this.time.TabIndex = 7;
             this.time.Text = "0 дней 0 часов и 0 минут до старта марафона!";
             this.time.Click += new System.EventHandler(this.time_Click);
@@ -145,18 +148,18 @@
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.White;
-            this.pictureBox1.Location = new System.Drawing.Point(-479, 64);
+            this.pictureBox1.Location = new System.Drawing.Point(-2, 48);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1120, 327);
+            this.pictureBox1.Size = new System.Drawing.Size(729, 327);
             this.pictureBox1.TabIndex = 8;
             this.pictureBox1.TabStop = false;
             // 
             // CompleteRunner
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(5F, 14F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.ClientSize = new System.Drawing.Size(542, 434);
+            this.ClientSize = new System.Drawing.Size(723, 434);
             this.Controls.Add(this.time);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -170,7 +173,7 @@
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.Name = "CompleteRunner";
-            this.Text = "Marathon Skills 2020 - Registration confirmation";
+            this.Text = "Marathon Skills 2021 - Registration confirmation";
             this.Load += new System.EventHandler(this.CompleteRunner_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

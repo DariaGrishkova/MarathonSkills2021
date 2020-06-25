@@ -76,9 +76,10 @@
             // 
             // button6
             // 
+            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F);
             this.button6.Location = new System.Drawing.Point(12, 12);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(75, 26);
+            this.button6.Size = new System.Drawing.Size(118, 32);
             this.button6.TabIndex = 1;
             this.button6.Text = "Назад";
             this.button6.UseVisualStyleBackColor = true;
@@ -87,22 +88,22 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(240, 15);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(354, 18);
+            this.label1.Size = new System.Drawing.Size(437, 20);
             this.label1.TabIndex = 2;
-            this.label1.Text = "Интерактивная карта MARATHON SKILLS 2020";
+            this.label1.Text = "Интерактивная карта MARATHON SKILLS 2021\r\n";
             // 
             // time
             // 
             this.time.AutoSize = true;
             this.time.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.time.ForeColor = System.Drawing.Color.Black;
-            this.time.Location = new System.Drawing.Point(277, 494);
+            this.time.Location = new System.Drawing.Point(274, 550);
             this.time.Name = "time";
-            this.time.Size = new System.Drawing.Size(307, 16);
+            this.time.Size = new System.Drawing.Size(451, 25);
             this.time.TabIndex = 3;
             this.time.Text = "0 дней 0 часов и 0 минут до старта марафона!";
             // 
@@ -124,60 +125,65 @@
             this.panel1.Controls.Add(this.landmark);
             this.panel1.Controls.Add(this.check1);
             this.panel1.Controls.Add(this.button2);
-            this.panel1.Location = new System.Drawing.Point(632, 64);
+            this.panel1.Location = new System.Drawing.Point(692, 72);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(228, 415);
+            this.panel1.Size = new System.Drawing.Size(265, 447);
             this.panel1.TabIndex = 5;
             // 
             // lmedical
             // 
             this.lmedical.AutoSize = true;
-            this.lmedical.Location = new System.Drawing.Point(59, 378);
+            this.lmedical.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
+            this.lmedical.Location = new System.Drawing.Point(101, 395);
             this.lmedical.Name = "lmedical";
-            this.lmedical.Size = new System.Drawing.Size(56, 16);
+            this.lmedical.Size = new System.Drawing.Size(87, 25);
             this.lmedical.TabIndex = 15;
             this.lmedical.Text = "Medical";
             // 
             // linformation
             // 
             this.linformation.AutoSize = true;
-            this.linformation.Location = new System.Drawing.Point(54, 334);
+            this.linformation.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
+            this.linformation.Location = new System.Drawing.Point(96, 351);
             this.linformation.Name = "linformation";
-            this.linformation.Size = new System.Drawing.Size(78, 16);
+            this.linformation.Size = new System.Drawing.Size(118, 25);
             this.linformation.TabIndex = 14;
             this.linformation.Text = "Information";
             // 
             // ltoilets
             // 
             this.ltoilets.AutoSize = true;
-            this.ltoilets.Location = new System.Drawing.Point(54, 288);
+            this.ltoilets.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
+            this.ltoilets.Location = new System.Drawing.Point(96, 305);
             this.ltoilets.Name = "ltoilets";
-            this.ltoilets.Size = new System.Drawing.Size(48, 16);
+            this.ltoilets.Size = new System.Drawing.Size(76, 25);
             this.ltoilets.TabIndex = 13;
             this.ltoilets.Text = "Toilets";
             // 
             // lenergy
             // 
             this.lenergy.AutoSize = true;
-            this.lenergy.Location = new System.Drawing.Point(52, 244);
+            this.lenergy.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
+            this.lenergy.Location = new System.Drawing.Point(94, 261);
             this.lenergy.Name = "lenergy";
-            this.lenergy.Size = new System.Drawing.Size(86, 16);
+            this.lenergy.Size = new System.Drawing.Size(130, 25);
             this.lenergy.TabIndex = 12;
             this.lenergy.Text = "Energy Bars";
             // 
             // ldrinks
             // 
             this.ldrinks.AutoSize = true;
-            this.ldrinks.Location = new System.Drawing.Point(54, 197);
+            this.ldrinks.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
+            this.ldrinks.Location = new System.Drawing.Point(96, 214);
             this.ldrinks.Name = "ldrinks";
-            this.ldrinks.Size = new System.Drawing.Size(48, 16);
+            this.ldrinks.Size = new System.Drawing.Size(73, 25);
             this.ldrinks.TabIndex = 11;
             this.ldrinks.Text = "Drinks";
             // 
             // medical
             // 
             this.medical.Image = ((System.Drawing.Image)(resources.GetObject("medical.Image")));
-            this.medical.Location = new System.Drawing.Point(3, 368);
+            this.medical.Location = new System.Drawing.Point(45, 385);
             this.medical.Name = "medical";
             this.medical.Size = new System.Drawing.Size(45, 39);
             this.medical.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -187,7 +193,7 @@
             // information
             // 
             this.information.Image = ((System.Drawing.Image)(resources.GetObject("information.Image")));
-            this.information.Location = new System.Drawing.Point(3, 323);
+            this.information.Location = new System.Drawing.Point(45, 340);
             this.information.Name = "information";
             this.information.Size = new System.Drawing.Size(45, 39);
             this.information.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -197,7 +203,7 @@
             // toilets
             // 
             this.toilets.Image = ((System.Drawing.Image)(resources.GetObject("toilets.Image")));
-            this.toilets.Location = new System.Drawing.Point(3, 278);
+            this.toilets.Location = new System.Drawing.Point(45, 295);
             this.toilets.Name = "toilets";
             this.toilets.Size = new System.Drawing.Size(45, 39);
             this.toilets.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -207,7 +213,7 @@
             // drinks
             // 
             this.drinks.Image = ((System.Drawing.Image)(resources.GetObject("drinks.Image")));
-            this.drinks.Location = new System.Drawing.Point(3, 188);
+            this.drinks.Location = new System.Drawing.Point(45, 205);
             this.drinks.Name = "drinks";
             this.drinks.Size = new System.Drawing.Size(45, 39);
             this.drinks.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -217,7 +223,7 @@
             // energy
             // 
             this.energy.Image = ((System.Drawing.Image)(resources.GetObject("energy.Image")));
-            this.energy.Location = new System.Drawing.Point(3, 233);
+            this.energy.Location = new System.Drawing.Point(45, 250);
             this.energy.Name = "energy";
             this.energy.Size = new System.Drawing.Size(45, 39);
             this.energy.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -227,44 +233,48 @@
             // services
             // 
             this.services.AutoSize = true;
-            this.services.Location = new System.Drawing.Point(3, 149);
+            this.services.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
+            this.services.Location = new System.Drawing.Point(45, 166);
             this.services.Name = "services";
-            this.services.Size = new System.Drawing.Size(126, 16);
+            this.services.Size = new System.Drawing.Size(192, 25);
             this.services.TabIndex = 4;
             this.services.Text = "Services Provided:";
             // 
             // landmarkN
             // 
             this.landmarkN.AutoSize = true;
-            this.landmarkN.Location = new System.Drawing.Point(3, 115);
+            this.landmarkN.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
+            this.landmarkN.Location = new System.Drawing.Point(45, 132);
             this.landmarkN.Name = "landmarkN";
-            this.landmarkN.Size = new System.Drawing.Size(110, 16);
+            this.landmarkN.Size = new System.Drawing.Size(166, 25);
             this.landmarkN.TabIndex = 3;
             this.landmarkN.Text = "Landmark name";
             // 
             // landmark
             // 
             this.landmark.AutoSize = true;
-            this.landmark.Location = new System.Drawing.Point(3, 82);
+            this.landmark.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
+            this.landmark.Location = new System.Drawing.Point(45, 99);
             this.landmark.Name = "landmark";
-            this.landmark.Size = new System.Drawing.Size(75, 16);
+            this.landmark.Size = new System.Drawing.Size(113, 25);
             this.landmark.TabIndex = 2;
             this.landmark.Text = "Landmark:";
             // 
             // check1
             // 
             this.check1.AutoSize = true;
-            this.check1.Location = new System.Drawing.Point(3, 50);
+            this.check1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
+            this.check1.Location = new System.Drawing.Point(45, 67);
             this.check1.Name = "check1";
-            this.check1.Size = new System.Drawing.Size(87, 16);
+            this.check1.Size = new System.Drawing.Size(132, 25);
             this.check1.TabIndex = 1;
             this.check1.Text = "Checkpoint1";
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(144, 3);
+            this.button2.Location = new System.Drawing.Point(201, 27);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.Size = new System.Drawing.Size(32, 32);
             this.button2.TabIndex = 0;
             this.button2.Text = "X";
             this.button2.UseVisualStyleBackColor = true;
@@ -272,7 +282,7 @@
             // 
             // b1
             // 
-            this.b1.Location = new System.Drawing.Point(549, 54);
+            this.b1.Location = new System.Drawing.Point(566, 78);
             this.b1.Name = "b1";
             this.b1.Size = new System.Drawing.Size(45, 37);
             this.b1.TabIndex = 6;
@@ -282,7 +292,7 @@
             // 
             // b2
             // 
-            this.b2.Location = new System.Drawing.Point(313, 234);
+            this.b2.Location = new System.Drawing.Point(314, 248);
             this.b2.Name = "b2";
             this.b2.Size = new System.Drawing.Size(45, 37);
             this.b2.TabIndex = 7;
@@ -302,7 +312,7 @@
             // 
             // b5
             // 
-            this.b5.Location = new System.Drawing.Point(108, 185);
+            this.b5.Location = new System.Drawing.Point(137, 197);
             this.b5.Name = "b5";
             this.b5.Size = new System.Drawing.Size(45, 37);
             this.b5.TabIndex = 9;
@@ -312,7 +322,7 @@
             // 
             // b6
             // 
-            this.b6.Location = new System.Drawing.Point(42, 54);
+            this.b6.Location = new System.Drawing.Point(28, 78);
             this.b6.Name = "b6";
             this.b6.Size = new System.Drawing.Size(45, 37);
             this.b6.TabIndex = 10;
@@ -340,7 +350,7 @@
             // 
             this.fullrace.Cursor = System.Windows.Forms.Cursors.Hand;
             this.fullrace.Image = ((System.Drawing.Image)(resources.GetObject("fullrace.Image")));
-            this.fullrace.Location = new System.Drawing.Point(382, 54);
+            this.fullrace.Location = new System.Drawing.Point(374, 99);
             this.fullrace.Name = "fullrace";
             this.fullrace.Size = new System.Drawing.Size(72, 61);
             this.fullrace.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -352,7 +362,7 @@
             // 
             this.funrace.Cursor = System.Windows.Forms.Cursors.Hand;
             this.funrace.Image = ((System.Drawing.Image)(resources.GetObject("funrace.Image")));
-            this.funrace.Location = new System.Drawing.Point(15, 171);
+            this.funrace.Location = new System.Drawing.Point(-6, 204);
             this.funrace.Name = "funrace";
             this.funrace.Size = new System.Drawing.Size(72, 61);
             this.funrace.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -376,9 +386,9 @@
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.White;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(-6, 44);
+            this.pictureBox2.Location = new System.Drawing.Point(-6, 72);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(632, 447);
+            this.pictureBox2.Size = new System.Drawing.Size(692, 444);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 4;
             this.pictureBox2.TabStop = false;
@@ -387,19 +397,19 @@
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.White;
-            this.pictureBox1.Location = new System.Drawing.Point(-6, 44);
+            this.pictureBox1.Location = new System.Drawing.Point(-6, 72);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(879, 447);
+            this.pictureBox1.Size = new System.Drawing.Size(1007, 447);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
             // Map
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.ClientSize = new System.Drawing.Size(870, 516);
+            this.ClientSize = new System.Drawing.Size(993, 584);
             this.Controls.Add(this.fullrace);
             this.Controls.Add(this.funrace);
             this.Controls.Add(this.halfrace);
@@ -419,7 +429,8 @@
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Map";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Marathon Skills 2020 - Interactive map";
+            this.Text = "Marathon Skills 2021";
+            this.Load += new System.EventHandler(this.Map_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.medical)).EndInit();

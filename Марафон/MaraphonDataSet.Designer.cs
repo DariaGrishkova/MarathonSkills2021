@@ -4590,8 +4590,6 @@ namespace Марафон {
             
             private global::System.Data.DataColumn columnCountryCode;
             
-            private global::System.Data.DataColumn columnImage;
-            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public RunnerDataTable() {
@@ -4667,14 +4665,6 @@ namespace Марафон {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn ImageColumn {
-                get {
-                    return this.columnImage;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -4710,15 +4700,14 @@ namespace Марафон {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public RunnerRow AddRunnerRow(UserRow parentUserRowByFK__Runner__Email__3F466844, GenderRow parentGenderRowByFK__Runner__Gender__403A8C7D, System.DateTime DateOfBirth, CountryRow parentCountryRowByFK__Runner__CountryC__412EB0B6, string Image) {
+            public RunnerRow AddRunnerRow(UserRow parentUserRowByFK__Runner__Email__3F466844, GenderRow parentGenderRowByFK__Runner__Gender__403A8C7D, System.DateTime DateOfBirth, CountryRow parentCountryRowByFK__Runner__CountryC__412EB0B6) {
                 RunnerRow rowRunnerRow = ((RunnerRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         null,
                         null,
                         DateOfBirth,
-                        null,
-                        Image};
+                        null};
                 if ((parentUserRowByFK__Runner__Email__3F466844 != null)) {
                     columnValuesArray[1] = parentUserRowByFK__Runner__Email__3F466844[0];
                 }
@@ -4762,7 +4751,6 @@ namespace Марафон {
                 this.columnGender = base.Columns["Gender"];
                 this.columnDateOfBirth = base.Columns["DateOfBirth"];
                 this.columnCountryCode = base.Columns["CountryCode"];
-                this.columnImage = base.Columns["Image"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4778,8 +4766,6 @@ namespace Марафон {
                 base.Columns.Add(this.columnDateOfBirth);
                 this.columnCountryCode = new global::System.Data.DataColumn("CountryCode", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnCountryCode);
-                this.columnImage = new global::System.Data.DataColumn("Image", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnImage);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnRunnerId}, true));
                 this.columnRunnerId.AutoIncrement = true;
@@ -4794,7 +4780,6 @@ namespace Марафон {
                 this.columnGender.MaxLength = 10;
                 this.columnCountryCode.AllowDBNull = false;
                 this.columnCountryCode.MaxLength = 3;
-                this.columnImage.MaxLength = 100;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -7553,22 +7538,6 @@ namespace Марафон {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string Image {
-                get {
-                    try {
-                        return ((string)(this[this.tableRunner.ImageColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Image\' в таблице \'Runner\' равно DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableRunner.ImageColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public CountryRow CountryRow {
                 get {
                     return ((CountryRow)(this.GetParentRow(this.Table.ParentRelations["FK__Runner__CountryC__412EB0B6"])));
@@ -7610,18 +7579,6 @@ namespace Марафон {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetDateOfBirthNull() {
                 this[this.tableRunner.DateOfBirthColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsImageNull() {
-                return this.IsNull(this.tableRunner.ImageColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetImageNull() {
-                this[this.tableRunner.ImageColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -9067,7 +9024,7 @@ SELECT CharityId, CharityName, CharityDescription, CharityLogo FROM Charity WHER
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Марафон.Properties.Settings.Default.MaraphonConnectionString;
+            this._connection.ConnectionString = global::Марафон.Properties.Settings.Default.MaraphonConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -9448,7 +9405,7 @@ SELECT CountryCode, CountryName, CountryFlag FROM Country WHERE (CountryCode = @
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Марафон.Properties.Settings.Default.MaraphonConnectionString;
+            this._connection.ConnectionString = global::Марафон.Properties.Settings.Default.MaraphonConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -9841,7 +9798,7 @@ SELECT EventId, EventName, EventTypeId, MarathonId, StartDateTime, Cost, MaxPart
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Марафон.Properties.Settings.Default.MaraphonConnectionString;
+            this._connection.ConnectionString = global::Марафон.Properties.Settings.Default.MaraphonConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -10294,7 +10251,7 @@ SELECT EventTypeId, EventTypeName FROM EventType WHERE (EventTypeId = @EventType
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Марафон.Properties.Settings.Default.MaraphonConnectionString;
+            this._connection.ConnectionString = global::Марафон.Properties.Settings.Default.MaraphonConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -10627,7 +10584,7 @@ SELECT EventTypeId, EventTypeName FROM EventType WHERE (EventTypeId = @EventType
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Марафон.Properties.Settings.Default.MaraphonConnectionString;
+            this._connection.ConnectionString = global::Марафон.Properties.Settings.Default.MaraphonConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -10959,7 +10916,7 @@ SELECT MarathonId, MarathonName, CityName, CountryCode, YearHeld FROM Marathon W
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Марафон.Properties.Settings.Default.MaraphonConnectionString;
+            this._connection.ConnectionString = global::Марафон.Properties.Settings.Default.MaraphonConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -11374,7 +11331,7 @@ SELECT PositionId, PositionName, PositionDescription, PayPeriod, Payrate FROM Po
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Марафон.Properties.Settings.Default.MaraphonConnectionString;
+            this._connection.ConnectionString = global::Марафон.Properties.Settings.Default.MaraphonConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -11757,7 +11714,7 @@ SELECT RaceKitOptionId, RaceKitOption, Cost FROM RaceKitOption WHERE (RaceKitOpt
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Марафон.Properties.Settings.Default.MaraphonConnectionString;
+            this._connection.ConnectionString = global::Марафон.Properties.Settings.Default.MaraphonConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -12128,7 +12085,7 @@ SELECT RegistrationId, RunnerId, RegistrationDateTime, RaceKitOptionId, Registra
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Марафон.Properties.Settings.Default.MaraphonConnectionString;
+            this._connection.ConnectionString = global::Марафон.Properties.Settings.Default.MaraphonConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -12504,7 +12461,7 @@ SELECT RegistrationEventId, RegistrationId, EventId, BibNumber, RaceTime FROM Re
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Марафон.Properties.Settings.Default.MaraphonConnectionString;
+            this._connection.ConnectionString = global::Марафон.Properties.Settings.Default.MaraphonConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -12884,7 +12841,7 @@ SELECT RegistrationStatusId, RegistrationStatus FROM RegistrationStatus WHERE (R
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Марафон.Properties.Settings.Default.MaraphonConnectionString;
+            this._connection.ConnectionString = global::Марафон.Properties.Settings.Default.MaraphonConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -13203,7 +13160,7 @@ SELECT RegistrationStatusId, RegistrationStatus FROM RegistrationStatus WHERE (R
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Марафон.Properties.Settings.Default.MaraphonConnectionString;
+            this._connection.ConnectionString = global::Марафон.Properties.Settings.Default.MaraphonConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -13515,11 +13472,10 @@ SELECT RegistrationStatusId, RegistrationStatus FROM RegistrationStatus WHERE (R
             tableMapping.ColumnMappings.Add("Gender", "Gender");
             tableMapping.ColumnMappings.Add("DateOfBirth", "DateOfBirth");
             tableMapping.ColumnMappings.Add("CountryCode", "CountryCode");
-            tableMapping.ColumnMappings.Add("Image", "Image");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[Runner] WHERE (([RunnerId] = @Original_RunnerId) AND ([Email] = @Original_Email) AND ([Gender] = @Original_Gender) AND ((@IsNull_DateOfBirth = 1 AND [DateOfBirth] IS NULL) OR ([DateOfBirth] = @Original_DateOfBirth)) AND ([CountryCode] = @Original_CountryCode) AND ((@IsNull_Image = 1 AND [Image] IS NULL) OR ([Image] = @Original_Image)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[Runner] WHERE (([RunnerId] = @Original_RunnerId) AND ([Email] = @Original_Email) AND ([Gender] = @Original_Gender) AND ((@IsNull_DateOfBirth = 1 AND [DateOfBirth] IS NULL) OR ([DateOfBirth] = @Original_DateOfBirth)) AND ([CountryCode] = @Original_CountryCode))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_RunnerId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "RunnerId", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Email", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Email", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -13527,36 +13483,31 @@ SELECT RegistrationStatusId, RegistrationStatus FROM RegistrationStatus WHERE (R
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_DateOfBirth", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DateOfBirth", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DateOfBirth", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DateOfBirth", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_CountryCode", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CountryCode", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Image", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Image", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Image", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Image", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[Runner] ([Email], [Gender], [DateOfBirth], [CountryCode], [Image]) VALUES (@Email, @Gender, @DateOfBirth, @CountryCode, @Image);
-SELECT RunnerId, Email, Gender, DateOfBirth, CountryCode, Image FROM Runner WHERE (RunnerId = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Runner] ([Email], [Gender], [DateOfBirth], [CountryCode]) VALU" +
+                "ES (@Email, @Gender, @DateOfBirth, @CountryCode);\r\nSELECT RunnerId, Email, Gende" +
+                "r, DateOfBirth, CountryCode FROM Runner WHERE (RunnerId = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Email", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Email", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Gender", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Gender", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DateOfBirth", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DateOfBirth", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CountryCode", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CountryCode", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Image", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Image", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Runner] SET [Email] = @Email, [Gender] = @Gender, [DateOfBirth] = @DateOfBirth, [CountryCode] = @CountryCode, [Image] = @Image WHERE (([RunnerId] = @Original_RunnerId) AND ([Email] = @Original_Email) AND ([Gender] = @Original_Gender) AND ((@IsNull_DateOfBirth = 1 AND [DateOfBirth] IS NULL) OR ([DateOfBirth] = @Original_DateOfBirth)) AND ([CountryCode] = @Original_CountryCode) AND ((@IsNull_Image = 1 AND [Image] IS NULL) OR ([Image] = @Original_Image)));
-SELECT RunnerId, Email, Gender, DateOfBirth, CountryCode, Image FROM Runner WHERE (RunnerId = @RunnerId)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Runner] SET [Email] = @Email, [Gender] = @Gender, [DateOfBirth] = @DateOfBirth, [CountryCode] = @CountryCode WHERE (([RunnerId] = @Original_RunnerId) AND ([Email] = @Original_Email) AND ([Gender] = @Original_Gender) AND ((@IsNull_DateOfBirth = 1 AND [DateOfBirth] IS NULL) OR ([DateOfBirth] = @Original_DateOfBirth)) AND ([CountryCode] = @Original_CountryCode));
+SELECT RunnerId, Email, Gender, DateOfBirth, CountryCode FROM Runner WHERE (RunnerId = @RunnerId)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Email", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Email", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Gender", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Gender", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DateOfBirth", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DateOfBirth", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CountryCode", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CountryCode", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Image", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Image", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_RunnerId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "RunnerId", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Email", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Email", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Gender", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Gender", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_DateOfBirth", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DateOfBirth", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DateOfBirth", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DateOfBirth", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_CountryCode", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CountryCode", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Image", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Image", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Image", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Image", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RunnerId", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "RunnerId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
@@ -13564,7 +13515,7 @@ SELECT RunnerId, Email, Gender, DateOfBirth, CountryCode, Image FROM Runner WHER
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Марафон.Properties.Settings.Default.MaraphonConnectionString;
+            this._connection.ConnectionString = global::Марафон.Properties.Settings.Default.MaraphonConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -13573,7 +13524,7 @@ SELECT RunnerId, Email, Gender, DateOfBirth, CountryCode, Image FROM Runner WHER
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT RunnerId, Email, Gender, DateOfBirth, CountryCode, Image FROM dbo.Runner";
+            this._commandCollection[0].CommandText = "SELECT RunnerId, Email, Gender, DateOfBirth, CountryCode FROM dbo.Runner";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -13634,7 +13585,7 @@ SELECT RunnerId, Email, Gender, DateOfBirth, CountryCode, Image FROM Runner WHER
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_RunnerId, string Original_Email, string Original_Gender, global::System.Nullable<global::System.DateTime> Original_DateOfBirth, string Original_CountryCode, string Original_Image) {
+        public virtual int Delete(int Original_RunnerId, string Original_Email, string Original_Gender, global::System.Nullable<global::System.DateTime> Original_DateOfBirth, string Original_CountryCode) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_RunnerId));
             if ((Original_Email == null)) {
                 throw new global::System.ArgumentNullException("Original_Email");
@@ -13662,14 +13613,6 @@ SELECT RunnerId, Email, Gender, DateOfBirth, CountryCode, Image FROM Runner WHER
             else {
                 this.Adapter.DeleteCommand.Parameters[5].Value = ((string)(Original_CountryCode));
             }
-            if ((Original_Image == null)) {
-                this.Adapter.DeleteCommand.Parameters[6].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[7].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[6].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[7].Value = ((string)(Original_Image));
-            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -13690,7 +13633,7 @@ SELECT RunnerId, Email, Gender, DateOfBirth, CountryCode, Image FROM Runner WHER
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string Email, string Gender, global::System.Nullable<global::System.DateTime> DateOfBirth, string CountryCode, string Image) {
+        public virtual int Insert(string Email, string Gender, global::System.Nullable<global::System.DateTime> DateOfBirth, string CountryCode) {
             if ((Email == null)) {
                 throw new global::System.ArgumentNullException("Email");
             }
@@ -13715,12 +13658,6 @@ SELECT RunnerId, Email, Gender, DateOfBirth, CountryCode, Image FROM Runner WHER
             else {
                 this.Adapter.InsertCommand.Parameters[3].Value = ((string)(CountryCode));
             }
-            if ((Image == null)) {
-                this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(Image));
-            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -13741,7 +13678,7 @@ SELECT RunnerId, Email, Gender, DateOfBirth, CountryCode, Image FROM Runner WHER
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string Email, string Gender, global::System.Nullable<global::System.DateTime> DateOfBirth, string CountryCode, string Image, int Original_RunnerId, string Original_Email, string Original_Gender, global::System.Nullable<global::System.DateTime> Original_DateOfBirth, string Original_CountryCode, string Original_Image, int RunnerId) {
+        public virtual int Update(string Email, string Gender, global::System.Nullable<global::System.DateTime> DateOfBirth, string CountryCode, int Original_RunnerId, string Original_Email, string Original_Gender, global::System.Nullable<global::System.DateTime> Original_DateOfBirth, string Original_CountryCode, int RunnerId) {
             if ((Email == null)) {
                 throw new global::System.ArgumentNullException("Email");
             }
@@ -13766,48 +13703,34 @@ SELECT RunnerId, Email, Gender, DateOfBirth, CountryCode, Image FROM Runner WHER
             else {
                 this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(CountryCode));
             }
-            if ((Image == null)) {
-                this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(Image));
-            }
-            this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(Original_RunnerId));
+            this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(Original_RunnerId));
             if ((Original_Email == null)) {
                 throw new global::System.ArgumentNullException("Original_Email");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(Original_Email));
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(Original_Email));
             }
             if ((Original_Gender == null)) {
                 throw new global::System.ArgumentNullException("Original_Gender");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(Original_Gender));
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(Original_Gender));
             }
             if ((Original_DateOfBirth.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((System.DateTime)(Original_DateOfBirth.Value));
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((System.DateTime)(Original_DateOfBirth.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[8].Value = global::System.DBNull.Value;
             }
             if ((Original_CountryCode == null)) {
                 throw new global::System.ArgumentNullException("Original_CountryCode");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(Original_CountryCode));
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(Original_CountryCode));
             }
-            if ((Original_Image == null)) {
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[12].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((string)(Original_Image));
-            }
-            this.Adapter.UpdateCommand.Parameters[13].Value = ((int)(RunnerId));
+            this.Adapter.UpdateCommand.Parameters[10].Value = ((int)(RunnerId));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -13828,8 +13751,8 @@ SELECT RunnerId, Email, Gender, DateOfBirth, CountryCode, Image FROM Runner WHER
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string Email, string Gender, global::System.Nullable<global::System.DateTime> DateOfBirth, string CountryCode, string Image, int Original_RunnerId, string Original_Email, string Original_Gender, global::System.Nullable<global::System.DateTime> Original_DateOfBirth, string Original_CountryCode, string Original_Image) {
-            return this.Update(Email, Gender, DateOfBirth, CountryCode, Image, Original_RunnerId, Original_Email, Original_Gender, Original_DateOfBirth, Original_CountryCode, Original_Image, Original_RunnerId);
+        public virtual int Update(string Email, string Gender, global::System.Nullable<global::System.DateTime> DateOfBirth, string CountryCode, int Original_RunnerId, string Original_Email, string Original_Gender, global::System.Nullable<global::System.DateTime> Original_DateOfBirth, string Original_CountryCode) {
+            return this.Update(Email, Gender, DateOfBirth, CountryCode, Original_RunnerId, Original_Email, Original_Gender, Original_DateOfBirth, Original_CountryCode, Original_RunnerId);
         }
     }
     
@@ -13998,7 +13921,7 @@ SELECT SponsorshipId, SponsorName, RegistrationId, Amount FROM Sponsorship WHERE
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Марафон.Properties.Settings.Default.MaraphonConnectionString;
+            this._connection.ConnectionString = global::Марафон.Properties.Settings.Default.MaraphonConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -14359,7 +14282,7 @@ SELECT StaffId, FirstName, LastName, Email, DateOfBirth, Gender, PositionId FROM
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Марафон.Properties.Settings.Default.MaraphonConnectionString;
+            this._connection.ConnectionString = global::Марафон.Properties.Settings.Default.MaraphonConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -14813,7 +14736,7 @@ SELECT StaffId, FirstName, LastName, Email, DateOfBirth, Gender, PositionId FROM
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Марафон.Properties.Settings.Default.MaraphonConnectionString;
+            this._connection.ConnectionString = global::Марафон.Properties.Settings.Default.MaraphonConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -15094,7 +15017,7 @@ SELECT Email, Password, FirstName, LastName, RoleId FROM [User] WHERE (Email = @
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Марафон.Properties.Settings.Default.MaraphonConnectionString;
+            this._connection.ConnectionString = global::Марафон.Properties.Settings.Default.MaraphonConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -15532,7 +15455,7 @@ SELECT VolunteerId, FirstName, LastName, CountryCode, Gender FROM Volunteer WHER
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Марафон.Properties.Settings.Default.MaraphonConnectionString;
+            this._connection.ConnectionString = global::Марафон.Properties.Settings.Default.MaraphonConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

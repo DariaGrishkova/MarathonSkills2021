@@ -231,7 +231,7 @@ namespace Марафон
             }
             if (checkBox1.Checked == true || checkBox2.Checked == true || checkBox3.Checked == true)
             {
-                using (SqlConnection conn = new SqlConnection(Марафон.Properties.Settings.Default.MaraphonConnectionString))
+                using (SqlConnection conn = new SqlConnection(Марафон.Properties.Settings.Default.MaraphonConnectionString1))
                 {
                     conn.Open();
                     SqlCommand cmd = conn.CreateCommand();
@@ -255,6 +255,11 @@ namespace Марафон
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
         {
 
         }

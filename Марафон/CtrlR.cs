@@ -24,7 +24,7 @@ namespace Марафон
         private void timer1_Tick(object sender, EventArgs e)
         {
             TimeSpan time1;
-            DateTime initial_time = Convert.ToDateTime("08.08.2020 06:00");
+            DateTime initial_time = Convert.ToDateTime("12.07.2021 09:00");
             DateTime current_time = DateTime.Now;
             time1 = initial_time - current_time;
             time.Text = time1.Days.ToString() + " дней " + time1.Hours.ToString() + " часов и " + time1.Minutes.ToString() + " минут до старта марафона!";
@@ -74,7 +74,7 @@ namespace Марафон
         {
             DataSet ds = new DataSet();
             ds.Clear();
-            string con = Марафон.Properties.Settings.Default.MaraphonConnectionString;
+            string con = Марафон.Properties.Settings.Default.MaraphonConnectionString1;
             using (SqlDataAdapter da = new SqlDataAdapter(@"SELECT[User].FirstName AS Имя, [User].LastName AS Фамилия, [User].Email,[RegistrationStatus].RegistrationStatus AS Статус FROM Event INNER JOIN EventType ON Event.EventTypeId = EventType.EventTypeId INNER JOIN RegistrationEvent ON Event.EventId = RegistrationEvent.EventId INNER JOIN Runner INNER JOIN[User] ON Runner.Email = [User].Email INNER JOIN Registration ON Runner.RunnerId = Registration.RunnerId INNER JOIN RegistrationStatus ON Registration.RegistrationStatusId = RegistrationStatus.RegistrationStatusId ON RegistrationEvent.RegistrationId = Registration.RegistrationId WHERE([User].RoleId = N'R') AND(RegistrationStatus.RegistrationStatus = N'" + comboBox1.Text + "') AND(EventType.EventTypeName = N'" + comboBox2.Text + "')", con))//используя SqlDataAdapter с командой query и строкой соединения con
             {
                 da.Fill(ds, "table");

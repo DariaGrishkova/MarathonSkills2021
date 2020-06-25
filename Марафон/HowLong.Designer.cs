@@ -41,6 +41,7 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -54,7 +55,6 @@
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.label16 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
@@ -70,13 +70,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
@@ -87,10 +87,11 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(24, 13);
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F);
+            this.button1.Location = new System.Drawing.Point(13, 13);
             this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(85, 27);
+            this.button1.Size = new System.Drawing.Size(118, 32);
             this.button1.TabIndex = 0;
             this.button1.Text = "Назад";
             this.button1.UseVisualStyleBackColor = true;
@@ -99,19 +100,20 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(240, 18);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(170, 16);
+            this.label1.Size = new System.Drawing.Size(228, 20);
             this.label1.TabIndex = 3;
-            this.label1.Text = "MARATHON SKILLS 2020";
+            this.label1.Text = "MARATHON SKILLS 2021";
             // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.White;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(67, 129);
+            this.pictureBox1.Location = new System.Drawing.Point(128, 138);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(197, 160);
@@ -123,7 +125,7 @@
             // label2
             // 
             this.label2.BackColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(30, 293);
+            this.label2.Location = new System.Drawing.Point(103, 313);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(256, 48);
@@ -136,18 +138,19 @@
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(113, 106);
+            this.label3.Location = new System.Drawing.Point(133, 110);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(52, 16);
+            this.label3.Size = new System.Drawing.Size(75, 24);
             this.label3.TabIndex = 7;
             this.label3.Text = "F1 Car";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // pictureBox4
             // 
             this.pictureBox4.BackColor = System.Drawing.Color.White;
-            this.pictureBox4.Location = new System.Drawing.Point(-2, 47);
+            this.pictureBox4.Location = new System.Drawing.Point(1, 58);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(694, 406);
+            this.pictureBox4.Size = new System.Drawing.Size(747, 406);
             this.pictureBox4.TabIndex = 9;
             this.pictureBox4.TabStop = false;
             // 
@@ -157,7 +160,7 @@
             this.label4.BackColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(224, 58);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(198, 16);
+            this.label4.Size = new System.Drawing.Size(288, 24);
             this.label4.TabIndex = 10;
             this.label4.Text = "Насколько долгий марафон?";
             // 
@@ -166,9 +169,9 @@
             this.time.AutoSize = true;
             this.time.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.time.ForeColor = System.Drawing.Color.Black;
-            this.time.Location = new System.Drawing.Point(190, 456);
+            this.time.Location = new System.Drawing.Point(177, 487);
             this.time.Name = "time";
-            this.time.Size = new System.Drawing.Size(307, 16);
+            this.time.Size = new System.Drawing.Size(451, 25);
             this.time.TabIndex = 11;
             this.time.Text = "0 дней 0 часов и 0 минут до старта марафона!";
             // 
@@ -182,10 +185,10 @@
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Location = new System.Drawing.Point(449, 90);
+            this.tabControl1.Location = new System.Drawing.Point(475, 90);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(218, 345);
+            this.tabControl1.Size = new System.Drawing.Size(231, 345);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
@@ -204,12 +207,24 @@
             this.tabPage1.Controls.Add(this.pictureBox7);
             this.tabPage1.Controls.Add(this.pictureBox5);
             this.tabPage1.Controls.Add(this.pictureBox3);
-            this.tabPage1.Location = new System.Drawing.Point(4, 25);
+            this.tabPage1.Location = new System.Drawing.Point(4, 32);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Size = new System.Drawing.Size(210, 316);
+            this.tabPage1.Size = new System.Drawing.Size(223, 309);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Сходность";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(23, 14);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(46, 36);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 0;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // label11
             // 
@@ -217,7 +232,7 @@
             this.label11.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label11.Location = new System.Drawing.Point(81, 266);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(45, 16);
+            this.label11.Size = new System.Drawing.Size(66, 24);
             this.label11.TabIndex = 20;
             this.label11.Text = "Worm";
             this.label11.Click += new System.EventHandler(this.label11_Click);
@@ -228,7 +243,7 @@
             this.label10.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label10.Location = new System.Drawing.Point(75, 224);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(51, 16);
+            this.label10.Size = new System.Drawing.Size(74, 24);
             this.label10.TabIndex = 19;
             this.label10.Text = "Jaguar";
             this.label10.Click += new System.EventHandler(this.label10_Click);
@@ -239,7 +254,7 @@
             this.label9.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label9.Location = new System.Drawing.Point(75, 182);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(70, 16);
+            this.label9.Size = new System.Drawing.Size(101, 24);
             this.label9.TabIndex = 18;
             this.label9.Text = "Capybara";
             this.label9.Click += new System.EventHandler(this.label9_Click);
@@ -250,7 +265,7 @@
             this.label8.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label8.Location = new System.Drawing.Point(76, 140);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(40, 16);
+            this.label8.Size = new System.Drawing.Size(57, 24);
             this.label8.TabIndex = 17;
             this.label8.Text = "Sloth";
             this.label8.Click += new System.EventHandler(this.label8_Click);
@@ -261,7 +276,7 @@
             this.label7.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label7.Location = new System.Drawing.Point(75, 98);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(45, 16);
+            this.label7.Size = new System.Drawing.Size(66, 24);
             this.label7.TabIndex = 16;
             this.label7.Text = "Horse";
             this.label7.Click += new System.EventHandler(this.label7_Click);
@@ -272,7 +287,7 @@
             this.label6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label6.Location = new System.Drawing.Point(75, 56);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(36, 16);
+            this.label6.Size = new System.Drawing.Size(50, 24);
             this.label6.TabIndex = 15;
             this.label6.Text = "Slug";
             this.label6.Click += new System.EventHandler(this.label6_Click);
@@ -283,7 +298,7 @@
             this.label5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label5.Location = new System.Drawing.Point(76, 14);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(25, 16);
+            this.label5.Size = new System.Drawing.Size(35, 24);
             this.label5.TabIndex = 14;
             this.label5.Text = "F1";
             this.label5.Click += new System.EventHandler(this.label5_Click);
@@ -360,18 +375,6 @@
             this.pictureBox3.TabStop = false;
             this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(23, 14);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(46, 36);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 0;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
-            // 
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.label16);
@@ -384,9 +387,9 @@
             this.tabPage2.Controls.Add(this.pictureBox12);
             this.tabPage2.Controls.Add(this.pictureBox11);
             this.tabPage2.Controls.Add(this.pictureBox10);
-            this.tabPage2.Location = new System.Drawing.Point(4, 25);
+            this.tabPage2.Location = new System.Drawing.Point(4, 32);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Size = new System.Drawing.Size(210, 316);
+            this.tabPage2.Size = new System.Drawing.Size(223, 309);
             this.tabPage2.TabIndex = 0;
             this.tabPage2.Text = "Дистанция";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -397,7 +400,7 @@
             this.label16.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label16.Location = new System.Drawing.Point(69, 180);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(80, 16);
+            this.label16.Size = new System.Drawing.Size(114, 24);
             this.label16.TabIndex = 9;
             this.label16.Text = "Ronaldinho";
             this.label16.Click += new System.EventHandler(this.label16_Click);
@@ -408,7 +411,7 @@
             this.label15.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label15.Location = new System.Drawing.Point(65, 138);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(93, 16);
+            this.label15.Size = new System.Drawing.Size(133, 24);
             this.label15.TabIndex = 8;
             this.label15.Text = "Foolball Field";
             this.label15.Click += new System.EventHandler(this.label15_Click);
@@ -419,7 +422,7 @@
             this.label14.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label14.Location = new System.Drawing.Point(69, 96);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(84, 16);
+            this.label14.Size = new System.Drawing.Size(122, 24);
             this.label14.TabIndex = 7;
             this.label14.Text = "Airbus A380";
             this.label14.Click += new System.EventHandler(this.label14_Click);
@@ -430,7 +433,7 @@
             this.label13.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label13.Location = new System.Drawing.Point(69, 54);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(119, 16);
+            this.label13.Size = new System.Drawing.Size(178, 24);
             this.label13.TabIndex = 6;
             this.label13.Text = "Pair of Havaianas";
             this.label13.Click += new System.EventHandler(this.label13_Click);
@@ -441,7 +444,7 @@
             this.label12.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label12.Location = new System.Drawing.Point(65, 12);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(32, 16);
+            this.label12.Size = new System.Drawing.Size(46, 24);
             this.label12.TabIndex = 5;
             this.label12.Text = "Bus";
             this.label12.Click += new System.EventHandler(this.label12_Click);
@@ -508,11 +511,11 @@
             // 
             // HowLong
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.ClientSize = new System.Drawing.Size(689, 481);
+            this.ClientSize = new System.Drawing.Size(742, 534);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -533,13 +536,13 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).EndInit();

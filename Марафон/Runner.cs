@@ -22,7 +22,7 @@ namespace Марафон
         private void timer1_Tick(object sender, EventArgs e)
         {
             TimeSpan time1;
-            DateTime initial_time = Convert.ToDateTime("08.08.2020 06:00");
+            DateTime initial_time = Convert.ToDateTime("12.07.2021 09:00");
             DateTime current_time = DateTime.Now;
             time1 = initial_time - current_time;
             time.Text = time1.Days.ToString() + " дней " + time1.Hours.ToString() + " часов и " + time1.Minutes.ToString() + " минут до старта марафона!";
@@ -44,7 +44,9 @@ namespace Марафон
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            RegistrR RegistrR = new RegistrR();
+            RegistrR.Show();
+            this.Hide();
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -65,12 +67,21 @@ namespace Марафон
 
         private void button6_Click(object sender, EventArgs e)
         {
-          
+            Sponsor Sponsor = new Sponsor();
+            Sponsor.Show();
+            this.Hide();
         }
 
         private void time_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Results Results = new Results();
+            Results.Show();
+            this.Hide();
         }
     }
 }

@@ -147,7 +147,7 @@ namespace Марафон
 
         private void Sponsor_Load(object sender, EventArgs e)
         {
-            using (SqlConnection conn = new SqlConnection(Марафон.Properties.Settings.Default.MaraphonConnectionString))
+            using (SqlConnection conn = new SqlConnection(Марафон.Properties.Settings.Default.MaraphonConnectionString1))
             {
                 conn.Open();
                 SqlCommand cmd = conn.CreateCommand();
@@ -158,7 +158,7 @@ namespace Марафон
                 }
                 conn.Close();
             }
-            using (SqlConnection conn = new SqlConnection(Марафон.Properties.Settings.Default.MaraphonConnectionString))
+            using (SqlConnection conn = new SqlConnection(Марафон.Properties.Settings.Default.MaraphonConnectionString1))
             {
                 conn.Open();
                 SqlCommand cmd = conn.CreateCommand();
@@ -191,7 +191,7 @@ namespace Марафон
         private void label7_Click(object sender, EventArgs e)
         {
             TimeSpan time1;
-            DateTime initial_time = Convert.ToDateTime("08.08.2020 06:00");
+            DateTime initial_time = Convert.ToDateTime("12.07.2021 09:00");
             DateTime current_time = DateTime.Now;
             time1 = initial_time - current_time;
             time.Text = time1.Days.ToString() + " дней " + time1.Hours.ToString() + " часов и " + time1.Minutes.ToString() + " минут до старта марафона!";
@@ -241,6 +241,10 @@ namespace Марафон
             Fond.ShowDialog();
         }
 
+        private void button4_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 
 }
